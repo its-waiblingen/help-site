@@ -1,0 +1,85 @@
+title: "ITS Waiblingen"
+subtitle: "Hilfe-Seite"
+logo: "/assets/images/its-waiblingen.png"
+url: "https://hilfe.its-wn.de"
+baseurl: "/"
+repository: "its-waiblingen/help-site"
+minimal_mistakes_skin: "contrast"
+search: true
+
+lsi: false
+safe: true
+source: "." # "https://github.com/its-waiblingen/help-site"
+incremental: false
+gist:
+  noscript: false
+markdown: "kramdown"
+kramdown:
+  math_engine: "mathjax"
+  syntax_highlighter: "rouge"
+highlighter: "rouge"
+remote_theme: "mmistakes/minimal-mistakes@4.19.3"
+
+permalink: "/:categories/:title/"
+paginate: 30 # Amount of posts to show.
+paginate_path: "/page:num/"
+timezone: "Europe/Berlin" # See: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.
+
+include:
+  - "_pages"
+
+plugins:
+  - "jekyll-paginate"
+  - "jekyll-sitemap"
+  - "jekyll-gist"
+  - "jekyll-feed"
+  - "jemoji"
+  - "jekyll-include-cache"
+
+author:
+  name: "ITS Waiblingen"
+  avatar: "/assets/images/its-waiblingen.png"
+  bio: ""
+  links:
+    - label: "Webseite"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.its-waiblingen.de/"
+    - label: "Fernwartung"
+      icon: "fab fa-fw fa-link"
+      url: "https://get.anydesk.com/uQieNRlG/ITS-Fernwartung.exe"
+
+footer:
+  links:
+    - label: "Webseite"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.its-waiblingen.de/"
+    - label: "Fernwartung"
+      icon: "fab fa-fw fa-link"
+      url: "https://get.anydesk.com/uQieNRlG/ITS-Fernwartung.exe"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "single"
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
+      related: false
+  # _pages
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "single"
+      author_profile: false
+
+category_archive:
+  type: "liquid"
+  path: "/categories/"
+tag_archive:
+  type: "liquid"
+  path: "/tags/"
